@@ -1,5 +1,9 @@
 pipeline {
-    agent any 
+    agent {
+    node {
+        label 'jenkins-maven-agent'  
+         }
+    }
     stages {
     stage('maven install') {
       steps {
@@ -8,6 +12,6 @@ pipeline {
 
       }
     }
-
+  
   }
 }
